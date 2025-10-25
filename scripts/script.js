@@ -97,18 +97,18 @@ var background, noWhatsapp;
 
 async function kirimPesan() {
     var messageConfig = {
-        title: 'gimana kalau dari kamu? ketik donggg :D',
+        title: 'Mau baless messagenya sekarang egk? :3\nKetik ajaw disini',
         input: 'textarea',
         confirmButtonText: 'Kirim',
     };
     var { value: message } = await swalo.fire(messageConfig);
     if (message) {
-        await swalo.fire('Jawaban kamu ntar dikirim ke WA aku yaaa :D');
-        location.assign('https://wa.me/' + noWhatsapp + '?text=' + message + 'lopelope <3');
+        await swalo.fire('Jawaban kamu ini ntar otomatis link ke WA akuu (iyh soalnya kevan jago)');
+        location.assign('https://wa.me/' + noWhatsapp + '?text=' + message + ' mwah <3');
     } else {
         var emptyMessageConfig = {
             confirmButtonText: 'Iya deh',
-            title: 'HEH cantikkk jangan dikosongin dong :(',
+            title: 'HEH cantikkk jangan dikosongin dong, sedih ni :(',
         };
         await swalo.fire(emptyMessageConfig);
         kirimPesan();
@@ -119,7 +119,7 @@ var swalOptions = {};
 swalOptions.allowOutsideClick = false;
 var swalo = Swal.mixin(swalOptions);
 
-function DekaTutorial(musicUrl, photoUrl, backgroundUrl, noWhatsapp) {
+function triggerEvent(musicUrl, photoUrl, backgroundUrl, noWhatsapp) {
     window.addEventListener('load', () => {
         document.querySelector('.preload').style = 'display: none';
     });
